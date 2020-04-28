@@ -1,28 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <GameHall />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import GameHall from "./components/gameHall/GameHall";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    GameHall,
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Proxima Nova Lt', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  display: inline-flex;
+  width: 100%;
+  background: #110F36;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
 }
 </style>
